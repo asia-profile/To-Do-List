@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+  <header>
+      <div class="container">
+      <strong><nav>
+        <ul class="menu">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('addtask') }}">Add Task</a></li>
+          <li><a href="{{ url_for('complete') }}">Complete</a></li>
+          <li><a href="{{ url_for('incomplete') }}">Incomplete</a></li>
+        </ul>
+      </nav></strong>
+    </div>
+  </header>
+      {% block content %}
+      {% endblock %}
+    </body>
+</html>

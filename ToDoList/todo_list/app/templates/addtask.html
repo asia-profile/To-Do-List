@@ -1,0 +1,48 @@
+﻿{%extends "base.html" %}
+{% block title %} Create a new task {% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='addtask.css') }}">
+
+
+
+
+<div class="content">
+	<!-- <h2 class="name">Add a new task to the list</h2> -->
+	<div class="addform">
+
+<form action="" method="post" >
+	{{form.hidden_tag()}}
+	<h2 class="name">Add a new task to the list</h2>
+		<table>
+			<tr>
+			<td>
+			Date</td>
+			<td>{{ form.date }} <!-- with that form.date, if I import from .models in views.py I got displayed None in place of fields to enter data-->
+			 <!--<label> Date </label>
+			 <input id="date" name="date" type="date"/> -->
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Title </td>
+		<td>	{{ form.title }}
+			<!--<label> Title </label>
+			 <input id="title" name="title" type="text"/>-->
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Describtion </td>
+		<td>	{{ form.describe }}
+
+		</td>
+	</tr>
+	</table>
+<p><input type="submit" value="Add"</p>
+</form>
+</div>
+
+</div>
+
+{% endblock %}

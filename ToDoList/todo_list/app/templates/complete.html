@@ -1,0 +1,30 @@
+﻿{%extends "base.html" %}
+{% block title %} List of All Tasks {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='complete.css') }}">
+<div class="table">
+  <table class="done">
+      <thead>
+        <th>Date</th>
+            <th>Title</td>
+            <th>Description</th>
+         </thead>
+
+         {% for t in task %}
+         {%if t.complete == True%}
+            <tr>
+               <td>{{t.date}}</td>
+               <td>{{t.title}}</td>
+               <td> {{ t.describe}}</td>
+            </tr>
+            {%endif%}
+         {% endfor %}
+      </table>
+    </div>
+<br></br>
+    <div class="button">
+    <a href="/"> <button class="home">Go back to home page</button></a>
+    </div>
+      <!--<a href = "/">Go back to home page</a> -->
+      <!--links work, but not buttons - interesting-->
+{% endblock %}

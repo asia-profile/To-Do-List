@@ -1,0 +1,42 @@
+.table {
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+	display: flex;
+	justify-content: center;
+	align: center;
+}
+
+
+.done {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	border: 1px solid black;
+	color: white;
+	background-color: #008CBA;
+
+}
+th {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+tr {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.button {
+	position:relative;
+	display: flex;
+	justify-content: center;
+}

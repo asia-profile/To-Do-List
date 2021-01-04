@@ -1,0 +1,14 @@
+﻿{%extends "base.html" %}
+{% block title %} List {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+<div class="both">
+<div class="title">
+<h1 class="name">Your Own To-Do List</h1>
+</div>
+<div class="button">
+<a href="addtask"> <button class="new">New task</button></a>
+</div>
+</div>
+
+{% endblock %}
